@@ -1,9 +1,10 @@
-# Introduction
+# INTEGRATION OF DEEP LEARNING MODELS AND VISUAL ATTENTION MECHANISMS FOR LUNG DISEASE CLASSIFICATION FROM CHEST X-RAY IMAGE
+## Introduction
 Chest X-ray (CXR) is a common diagnostic method for chest issues, using a small amount of ionizing radiation to create internal images. It helps doctors identify and monitor lung diseases, but careful diagnosis requires expertise and time, which can lead to errors when many CXRs must be reviewed daily. Research suggests deep learning models can improve diagnostic accuracy. This study focuses on detecting key areas in CXRs for common lung diseases like tuberculosis, pneumonia, mass, and effusion. The results aim to develop automated tools to reduce errors and enhance diagnostic efficiency.<br>
 <img width="600" alt="{18703521-2A33-4970-B888-81A45A3C8F2E}" src="https://github.com/user-attachments/assets/01355644-4d84-4648-a7c7-6486ad9fa8b5">
 
 *Figure 1: Overview diagram of the research method.*
-# Dataset
+## Dataset
 Source: Tuberculosis Chest Xray Cleaned Dataset, Tuberculosis classification, NIH Chest Xray dataset, CXR dataset, VinDr CXR Normal <br>
 From: Kaggle <br>
 
@@ -14,7 +15,7 @@ From: Kaggle <br>
 
 <img width="600" alt="{D9C034BE-63DE-49F7-B8ED-E370158188EB}" src="https://github.com/user-attachments/assets/57210a9c-644e-4912-a02e-5272a0c3774e"><br>
 *Figure 2: Distributions of the datasets used.*
-# Research Method
+## Research Method
 - **Occlusion-based Method**: This method involves applying occlusion techniques to different regions of an X-ray image to assess the importance of these areas for disease classification and to observe their impact on the model's predictions. Figure 3 illustrates 9 occluded information regions on the X-ray for experimental purposes. Deep learning models InceptionV3, MobileNet, VGG16, and YOLOv8 are used to predict disease types.<br>
 <img width="600" alt="{DEDD07E6-45D0-4406-B704-214BFF58B423}" src="https://github.com/user-attachments/assets/6861de3a-c060-4379-a2d0-10759ebee61c"> <br>
 *Figure 3: 9 steps to jump to a glimpse on a chest X-ray image.*
@@ -23,7 +24,7 @@ From: Kaggle <br>
 
 - **Deep Learning Classification Model**: Two of the highest-performing models from the experiments, YOLOv8 and DenseNet121, are trained to predict disease labels or "normal" using X-ray image data.
 
-# Result
+## Result
 | Model                    | Accuracy  | Precision    | Recall     | F1-score   |
 |--------------------------|-----------|--------------|------------|------------|
 | YOLOv8 (516*516)        | **89.0934**  | **87.8825**    | **83.9925**  | **85.3262**  |
