@@ -2,12 +2,6 @@
 
 This is a **PyTorch** implementation of [Recurrent Models of Visual Attention](https://arxiv.org/abs/1406.6247) by *Volodymyr Mnih, Nicolas Heess, Alex Graves and Koray Kavukcuoglu*.
 
-<p align="center">
- <img src="./plots/bbox.png" alt="Drawing", width=60%>
-</p>
-<p align="center">
- <img src="./plots/glimpses.png" alt="Drawing", width=23%>
-</p>
 
 The *Recurrent Attention Model* (RAM) is a neural network that processes inputs sequentially, attending to different locations within the image one at a time, and incrementally combining information from these fixations to build up a dynamic internal representation of the image.
 
@@ -15,9 +9,7 @@ The *Recurrent Attention Model* (RAM) is a neural network that processes inputs 
 
 In this paper, the attention problem is modeled as the sequential decision process of a goal-directed agent interacting with a visual environment. The agent is built around a recurrent neural network: at each time step, it processes the sensor data, integrates information over time, and chooses how to act and how to deploy its sensor at the next time step.
 
-<p align="center">
- <img src="./plots/model.png" alt="Drawing", width=70%>
-</p>
+
 
 - **glimpse sensor**: a retina that extracts a foveated glimpse `phi` around location `l` from an image `x`. It encodes the region around `l` at a high-resolution but uses a progressively lower resolution for pixels further from `l`, resulting in a compressed representation of the original image `x`.
 - **glimpse network**: a network that combines the "what" (`phi`) and the "where" (`l`) into a glimpse feature vector w`g_t`.
@@ -37,9 +29,6 @@ I haven't done random search on the policy standard deviation to tune it, so I e
 
 Finally, here's an animation showing the glimpses extracted by the network on a random batch at epoch 23.
 
-<p align="center">
- <img src="./plots/example.gif" alt="Drawing", width=70%>
-</p>
 
 With the Adam optimizer, paper accuracy can be reached in ~160 epochs.
 
