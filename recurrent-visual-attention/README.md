@@ -2,6 +2,8 @@
 
 This is a **PyTorch** implementation of [Recurrent Models of Visual Attention](https://arxiv.org/abs/1406.6247) by *Volodymyr Mnih, Nicolas Heess, Alex Graves and Koray Kavukcuoglu*.
 
+**PLEASE VISIT https://github.com/kevinzakka/recurrent-visual-attention FOR FULL OF MATERIALS**
+
 
 The *Recurrent Attention Model* (RAM) is a neural network that processes inputs sequentially, attending to different locations within the image one at a time, and incrementally combining information from these fixations to build up a dynamic internal representation of the image.
 
